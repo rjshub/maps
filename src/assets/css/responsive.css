@@ -1,0 +1,84 @@
+@media screen and (max-width: 1920px) {
+    /* 顶部导航 */
+    .g__header_wrap,.g__header {
+        height: 88px;
+    }
+     /* .g__header .logo-zone {
+         width: 190px;
+         height: 100%;
+     } */
+     .g__header .el-menu-item {
+         font-size: 20px;
+         width: 200px;
+     }
+     .dialog-row {
+         width: 50% !important;
+     }
+     .el-dialog__wrapper .invite-member-container {
+         width: 50%;
+     }
+     .el-dialog__wrapper .permission-apply-container {
+         width: 50%;
+     }
+     .el-dialog__wrapper.push-detail-drawer .el-drawer__container .public-drawer {
+         width: 50%;
+     }
+     /* .el-dialog__wrapper .table-config-container .main-center .module-item .icon-child {
+        min-width: calc(50% - 50px);
+     }
+     .el-dialog__wrapper .table-config-container .main-center .module-item .icon-child {
+        min-width: calc(50% - 5px);
+     } */
+     .el-dialog__wrapper .table-config-container .main-right {
+         width: 400px !important;
+     }
+
+     /* .g__header .info-zone .info-zone__item .capsule, .g__header .alarm-zone {
+         font-size: 40px;
+     } */
+     /* .rule-create-drawer .el-drawer {
+         width: 50% !important;
+     } */
+}
+
+@media screen and (max-width: 1600px) {
+    /* 顶部导航 */
+    .g__header_wrap,.g__header {
+        height: 60px;
+    }
+     /* .g__header .logo-zone {
+         width: 190px;
+         height: 100%;
+     } */
+     .g__header .el-menu-item {
+         font-size: 16px;
+         width: 150px;
+     }
+     .dialog-row {
+        width: 70% !important;
+    }
+    .el-dialog__wrapper .invite-member-container {
+        width: 60% !important;
+    }
+    .el-dialog__wrapper .permission-apply-container {
+        width: 60% !important;
+    }
+    .el-dialog__wrapper.variety-drawer .el-drawer__container .public-drawer {
+        width: 70% !important;
+    }
+    /* .el-dialog__wrapper .table-config-container .main-center .module-item .icon-child {
+        min-width: calc(29% - 10px);
+     }
+     .el-dialog__wrapper .table-config-container .main-center .module-item .icon-child {
+        min-width: calc(50% - 5px);
+     } */
+    .el-dialog__wrapper .table-config-container .main-right {
+        width: 220px !important;
+    }
+     /* .g__header .info-zone .info-zone__item .capsule, .g__header .alarm-zone {
+         font-size: 40px;
+     } */
+     /* .rule-create-drawer .el-drawer {
+        width: 70% !important;
+    } */
+}

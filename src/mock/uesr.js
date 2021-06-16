@@ -53,5 +53,27 @@ export default {
                 },
             ]
         }
+    },
+    userdetail: config => {
+        return {
+            code: 0,
+            result: {
+                advertiserlist: [],
+                auth: null,
+                authdetail: null,
+                ctime: "2020-10-22 15:35:27",
+                enddate: null,
+                id: 125,
+                is_auth: 1,
+                is_manager: 1,
+                join_status: 2,
+                remark: "团队创建者",
+                startdate: null,
+                status: 1,
+                team_id: 9,
+                user_id: 19,
+                utime: "2020-10-22 15:35:27",
+            }
+        }
     }
 }

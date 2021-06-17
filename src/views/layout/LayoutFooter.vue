@@ -1,12 +1,16 @@
 <template>
-    <footer v-loading.fullscreen="isLoading">
-        Copyright ©{{year}}{{$t('lang.copyright')}}
-        <!-- <span :class="language  === 'zh'? 'privacy-text':''"
-            @click="change_language('zh')"> 中文(简体) </span>
-        |
-        <span :class="language  === 'en'? 'privacy-text':''"
-            @click="change_language('en')"> English</span> -->
-    </footer>
+  <footer v-loading.fullscreen="isLoading">
+    Copyright ©{{year}}{{$t('lang.copyright')}}
+    <span
+      :class="language  === 'zh'? 'privacy-text':''"
+      @click="change_language('zh')"
+    > 中文(简体) </span>
+    |
+    <span
+      :class="language  === 'en'? 'privacy-text':''"
+      @click="change_language('en')"
+    > English</span>
+  </footer>
 </template>
 <style>
 footer {
@@ -19,14 +23,14 @@ footer {
 <script>
 import { mapActions, mapGetters, mapState } from "vuex";
 import fetch from "@/services/fetch";
-import axios from 'axios'
+import axios from "axios";
 
 export default {
   name: "LayoutFooter",
   data() {
     return {
       isLoading: false,
-      year: new Date().getFullYear()
+      year: new Date().getFullYear(),
     };
   },
   computed: {
@@ -39,11 +43,15 @@ export default {
     change_language(param) {
       this.update_language(param);
       document.cookie = `lang=${param}`;
-      this.isLoading = true
-      axios.defaults.headers.common.lang = param
+      this.isLoading = true;
+      axios.defaults.headers.common.lang = param;
+      // 未做英文，暂时跳转
+      if (this.$route.meta.nav == "/advertising" && param == "en") {
+        this.$router.replace("/system");
+      }
       setTimeout(() => {
         window.location.reload();
-      }, 500)
+      }, 500);
     },
     async get_option_list() {
       const url = "/message/enum";

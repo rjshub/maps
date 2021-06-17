@@ -395,7 +395,7 @@ export default {
     // 选择成员
     async get_member_list() {
       this.member_loading = true;
-      const url = "message/getEmailList";
+      const url = "/message/getEmailList";
       const data = await this.fetchCore(
         url,
         { team_id: this.active_team_id },

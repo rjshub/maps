@@ -432,7 +432,7 @@ export default {
   methods: {
     // 查询是否有数据
     async get_log_count() {
-      const url = "rule/crontabloglist";
+      const url = "/rule/crontabloglist";
       const param = {
         team_id: this.active_team_id,
         word: "",
@@ -499,7 +499,7 @@ export default {
     },
     // 获取日志列表
     async get_log_list() {
-      const url = "rule/crontabloglist";
+      const url = "/rule/crontabloglist";
       this.filter_form.team_id = this.active_team_id;
       const data = await this.fetchCore(url, this.filter_form, true);
       if (data) {

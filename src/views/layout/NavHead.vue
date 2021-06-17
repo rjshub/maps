@@ -7,9 +7,10 @@
     text-color="#FFF"
     active-text-color="#FFF"
   >
+    <!-- 暂时 && language == 'zh' -->
     <el-menu-item
       index="/advertising"
-      v-if="!isRoot && !not_advertising"
+      v-if="!isRoot && !not_advertising && language == 'zh'"
     >
       <i class="iconfont maps-icon-AD"></i>
       <span slot="title">广告智投</span>
@@ -47,7 +48,7 @@ export default {
 
   watch: {},
   computed: {
-    ...mapState("user", ["user_id"]),
+    ...mapState("user", ["user_id", "language"]),
     ...mapGetters("user", ["isRoot"]),
     ...mapState("permissions", [
       "Rule_Intelligent_permission",
